@@ -17,6 +17,8 @@ html {
 
 body {
     /* background: linear-gradient(to right, white 0%, white 50%, black 50%, black 100%); */
+    width: 100%;
+    height: 100%;
 }
 
 a:link {
@@ -68,6 +70,11 @@ h3 {
     text-align: center;
     font-family: 'Share Tech Mono', monospace;
     font-size: 1em;
+    background-color: seashell;
+}
+
+.begin {
+    text-align: center;
 }
 
 .rel-poem {
@@ -125,11 +132,28 @@ p {
     top: 0;
 }
 
+.mirror {
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
 .contents {
     position: absolute;
     right: 0;
-    bottom: 3%;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
     font-kerning: normal;
+}
+
+.possibilities {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 750px;
 }
 
 .second-stanza {
@@ -153,12 +177,11 @@ p {
     top: 50%;
 }
 
-
-/* welcome::before {
-    content: class(welcome);
+.middle {
     position: absolute;
-    left: 0;
-    color: black;
-    width: 50%;
-    overflow: hidden;
-} *
+    right: 0;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: justify;
+}
